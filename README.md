@@ -1,2 +1,2 @@
 # GolangLab
-This is a repo to learn golan
+This is a repo to learn golang
