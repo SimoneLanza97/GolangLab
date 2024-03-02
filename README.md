@@ -132,7 +132,7 @@ You can appen a slice to your slice , but slices have to be of contains the same
         slice := append(slice, slice1)
 
 Now, the question is: how the f**k can I remove an index from a slice?
-Well, let's assume you want to remove the last index of the slice. In that case, you need to create another slice, possibly the same one, with a modified length.
+Well, let's assume you want to remove the last index of the slice. In that case, you need to create another time the same slice,with a modified length.
 Example:
                 slice := []int{1,2,3}
                 slice2 = slice[:2]
