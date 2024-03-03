@@ -66,7 +66,7 @@ You can use the build-in functions to see the length and capacity of an array:
 this is not very useful with arrays because arrays have a predefined capacity and the length will always correspond to the capacity, but all this will be useful with slices, which resemble arrays but do not have a predefined length.
 
 ## **OPERATORS** 
-Matematichs operators:
+**Matematical operators:**
 - \+ -> addition
 - \- -> subtraction
 - \* -> moltiplication
@@ -75,7 +75,12 @@ Matematichs operators:
 - ++ -> increment 
 - \-- -> decrement
 
-## **EXERCISES**
+**Logical operators**
+
+- && -> Logical And -> (5 > x && x > 3) 
+- || -> Logical Or  -> (5 > x || x > 3)
+- !  -> Logical Not -> !(5 < x && x < 3)
+
 
 ### **FMT MODULE**
 In Go, fmt is a package that provides functionality for formatting and printing output to the console. You can use fmt.Println() to print a new line to the console, fmt.Printf() to print formatted output.
@@ -86,6 +91,41 @@ In Go, fmt is a package that provides functionality for formatting and printing 
                     fmt.Println("Hello, world!")
                     fmt.Printf("Hello, world!\n")
                 }
+#### **FORMAT VERBS**
+
+With Fmt you can print formatted lines with Printf.
+When we use printf, we can combine text to be printed with variable values, and we can choose how to format the variable value and consequently how to display it.
+Here an example:
+
+                fmt.Printf("this is your variable: %v", variable)
+
+As you can see, we used the notation %v\n. The character \n only allows to line break, while %v is the notation to print the value of a variable in normal format.
+
+**Other general formatting verbs are:**
+
+- %#v	a Go-syntax representation of the value
+- %T	a Go-syntax representation of the type of the value
+- %%	a literal percent sign; consumes no value
+
+**Format for integer values:**
+
+- %b	base 2 
+- %c	the character represented by the corresponding Unicode code point
+- %d	base 10  
+- %o	base 8  
+
+**Format for Float values:**
+
+- %f     default width, default precision
+- %9f    width 9, default precision
+- %.2f   default width, precision 2
+- %9.2f  width 9, precision 2
+- %9.f   width 9, precision 0
+
+These are just a few of the most commonly used format verbs. You can find others on the official documentation page of the fmt package.
+[-> fmt Official Documentation Page](https://pkg.go.dev/fmt)
+
+## **EXERCISES**
 
 Now you know how to print something on the screen and you might be able to do the next exercises:
 
@@ -131,10 +171,17 @@ You can appen a slice to your slice , but slices have to be of contains the same
         slice1 := []int{55,33}
         slice := append(slice, slice1)
 
-Now, the question is: how the f**k can I remove an index from a slice?
+Now, the question is: how can I remove an index from a slice?
 Well, let's assume you want to remove the last index of the slice. In that case, you need to create another time the same slice,with a modified length.
 Example:
+               
                 slice := []int{1,2,3}
                 slice2 = slice[:2]
 
 With this notation, slice2 takes the indexes of slice from index 0 up to index 2, but index 2 is not included. Therefore, we can say that it's as if slice2 takes from index 0 to index 1. 
+
+## **EXERCISES 2**
+
+- 1.Write a function that takes an array as input and returns a slice containing the same values as the array.
+- 2.Write a function that takes two slices of float64 as input and returns a slice containing all the elements from both slices, in the order they appear.
+- 3.Write a function that takes as input two slices and an integer value "x", and creates a third slice corresponding to the first slice plus a number of elements from the second slice equal to "x".
