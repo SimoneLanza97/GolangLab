@@ -124,7 +124,7 @@ As you can see, we used the notation %v\n. The character \n only allows to line 
 
 These are just a few of the most commonly used format verbs. You can find others on the official documentation page of the fmt package.
 [-> fmt Official Documentation Page](https://pkg.go.dev/fmt)
-
+Write a function that takes a slice of integers and two indices as input and returns a slice containing all the elements from the input slice between the specified indices (inclusive).
 ## **EXERCISES**
 
 Now you know how to print something on the screen and you might be able to do the next exercises:
@@ -185,3 +185,66 @@ With this notation, slice2 takes the indexes of slice from index 0 up to index 2
 - 1.Write a function that takes an array as input and returns a slice containing the same values as the array.
 - 2.Write a function that takes two slices of float64 as input and returns a slice containing all the elements from both slices, in the order they appear.
 - 3.Write a function that takes as input two slices and an integer value "x", and creates a third slice corresponding to the first slice plus a number of elements from the second slice equal to "x".
+
+## **IF CONDITIONS**
+
+In Go, like in any other programming language, the conditional if statement is used to execute blocks of code when a certain condition is met.
+
+**SYNTAX**
+
+The syntax for if statements is very simple.
+Example:
+
+        x := 7
+        if x > 5 {
+                fmt.Println("x is greater than 5")
+        } else if x = 5 {
+                fmt.Println("x is equal to 5")
+        }else {
+                fmt.Println("x is less than 5" )
+        }
+
+## **SWITCH STATEMENT**
+Switch statements are specifically designed for comparing a single value against a set of possible values. This makes them a better choice when you have many conditions based on the same variable.
+
+**SYNTAX**
+
+The syntax for switch statement is the following
+
+        x := 7
+        switch x {
+        case x > 5: 
+                fmt.Println("x is greater than 5")
+        case x < 5:
+                fmt.Println("x is equal to 5")               
+        case x = 5:
+                fmt.Println("x is less than 5")
+        default:
+                fmt.Println("x doesn't exist")
+        }
+
+As you can see , in switch statement we can use the **default**.
+The "default" in a switch statement in Go is a special case that is executed when none of the cases match the value of the control variable. It is similar to an else statement in an if-else statement. The default case is optional and can be included at the end of a switch block to handle all values that do not match any of the specified cases.
+
+## FOR LOOPS
+A for loop in Go is used to repeatedly execute a block of code until a specified condition is met. Here's a simple explanation with an example:
+
+In a for loop, you typically have three components:
+
+Initialization: This is where you initialize any variables that will be used in the loop.
+Condition: This is the condition that is evaluated before each iteration of the loop. If the condition evaluates to true, the loop continues; if it evaluates to false, the loop terminates.
+Post statement: This is where you update any variables or perform any actions after each iteration of the loop.
+
+Here's an example of a simple for loop that prints the numbers from 1 to 5:
+
+        for i := 1; i <= 5; i++ {
+                fmt.Println(i) // Print the current value of i
+    }
+
+In this example:
+
+- The loop initializes i to 1.
+- It then checks if i is less than or equal to 5.
+- If the condition is true, it executes the block of code inside the loop (in this case, printing the value of i).
+- After each iteration, it increments i by 1.
+- It continues this process until i is no longer less than or equal to 5.
